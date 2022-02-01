@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="w3-bar w3-black">
+	  <a href="index.html" class="w3-button w3-bar-item">Home</a>
+	  <a href="about_me.html" class="w3-button w3-bar-item">About Me</a>
+	  <a href="contact_me.html" class="w3-button w3-bar-item">Contact Me</a>
+	  <a href="my_photos.html" class="w3-button w3-bar-item">My Photos</a>
+	</nav>
+	
+	<section class="w3-container w3-center w3-content" style="max-width:600px">
+	  <h1 class="w3-wide" style="color:grey; font-family:verdana">I AM ARJUN GANESH</h1>
+	</section>
+	
+	<center>
+	<section>
+	  <img class="mySlides" src="./images/welcome.jpeg" style="width: 50%; background-color: black;" >
+	  <img class="mySlides" src="./images/have_a_nice_day.jpeg" style="width:50%; background-color: black;">
+	</section>
+	</center>
+	
+	<script>
+
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none";
+	  }
+	  myIndex++;
+	  if (myIndex > x.length) {myIndex = 1}
+	  x[myIndex-1].style.display = "block";
+	  setTimeout(carousel, 4000);
+	}
+	
+	</script>
+	
+
+
+</body>
+</html>
